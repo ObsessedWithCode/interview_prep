@@ -15,3 +15,6 @@ function outerFunction() {
 const myClosure = outerFunction();
 myClosure(); // Logs: 'I am outside!'
 ```
+### Advantages
+1. ** Data Privacy/Encapsulate: **They allow functions to have private variables, data and logic.
+2. ** Maintaining State: **Closures can maintain state across multiple function calls.
