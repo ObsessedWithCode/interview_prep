@@ -49,16 +49,15 @@ myPromise.then(result => {
 });
 ```
 **async/await** is a syntax that makes working with promises easier to read by providing a more synchronous-looking way to write asynchronous code, essentially acting as a cleaner way to chain promise operations together.
-```
-async function executeAsyncFunction() {
+
+```async function executeAsyncFunction() {
     try {
         let result = await myAsyncFunction();
         console.log(result); // Logs: "Operation was successful!"
     } catch (error) {
         console.log(error);
     }
-}
-```
+}```
 ###Key differences between promises and async/await:
 **Syntax:** async/await provides a more readable and synchronous-looking syntax for handling asynchronous operations compared to the chaining syntax of promises.
 **Error Handling:** With async/await, you can use try...catch blocks for error handling, which is more intuitive than using .catch() with promises.
