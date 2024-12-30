@@ -48,7 +48,7 @@ myPromise.then(result => {
     console.log(error);
 });
 ```
-**async/await** is a syntax that makes working with promises easier to read by providing a more synchronous-looking way to write asynchronous code, essentially acting as a cleaner way to chain promise operations together.
+**async/await** is a syntax that makes working with promises easier to read by providing a more synchronous-looking way to write asynchronous code, essentially acting as a cleaner way to chain promise operations together
 
 ```
 async function executeAsyncFunction() {
@@ -60,8 +60,7 @@ async function executeAsyncFunction() {
     }
 }
 ```
-
-###Key differences between promises and async/await:
+### Key differences between promises and async/await:
 **Syntax:** async/await provides a more readable and synchronous-looking syntax for handling asynchronous operations compared to the chaining syntax of promises.
 **Error Handling:** With async/await, you can use try...catch blocks for error handling, which is more intuitive than using .catch() with promises.
 **Readability:** async/await makes the code easier to read and maintain, especially when dealing with multiple asynchronous operations.
@@ -73,7 +72,7 @@ The this keyword in JavaScript can be a bit tricky because its value depends on 
 3. **Arrow Function:** Do not have thier own this context, instead the refers to the outer lexical function/object, where the arrow function is defined. 
 4. **Event Handlers:** this refers to the element that received the element. 
 
-##Q. Debounce and Throttle
+## Q. Debounce and Throttle
 **Debounce** delays the execution of a function/api until a specific time is passed since the last call. 
 Use case: Search input, resize window
 **Throttle** ensures that a function is getting called at most once in a specific period. 
@@ -91,9 +90,9 @@ function configureLogger(level) {
 const infoLogger = configureLogger('INFO');
 infoLogger('This is an info message'); // Outputs: [INFO] This is an info message
 ```
-##Q. Explain how closures can lead to memory leaks?
+## Q. Explain how closures can lead to memory leaks?
 A **closure** is a function that retains access to its lexical scope, even when the function is getting executed outside that scope.
-###How Closures Can Cause Memory Leaks
+### How Closures Can Cause Memory Leaks
 **1. Unintended Retention of Variables:** Closures can unintentionally retain references to variables in their outer scope, preventing those variables from being garbage collected.
 ```
 function createClosure() {
@@ -106,7 +105,7 @@ function createClosure() {
 const closure = createClosure();
 // largeArray is still in memory because the closure retains a reference to it
 ```
-**Solution: **Explicitly set references to null when they are no longer needed.
+**Solution:** Explicitly set references to null when they are no longer needed.
 function createClosure() {
     let largeArray = new Array(1000000).fill('data');
     return function() {
@@ -140,17 +139,17 @@ function startTimer() {
 
 startTimer();
 ```
-##Q. What is garbage collection in js, and how does it work?
+## Q. What is garbage collection in js, and how does it work?
 Garbage collection in JavaScript is the process of automatically freeing up memory that is no longer in use by the program. This helps prevent memory leaks and ensures efficient memory usage.
 Javascript uses **mark-and-sweep** algorithm, phases are explained below.
 **1. Mark Phase:** The garbage collector starts from the root and marks all reachable objects.
 **2. Sweep Phase:** It removes objects that are not marked as reachable and reclaims their memory.
-##Q. How can you prevent memory leaks in js?
+## Q. How can you prevent memory leaks in js?
 1. Remove event listeners when no longer needed.
 2. Avoid global variables.
 3. Clear references when no longer needed.
 4. Use closures carefully.
-##Q. Explain the concept of function composition in js?
+## Q. Explain the concept of function composition in js?
 Combine multiple functions into one, where the outputof the one function becomes the input of the next.
 ###Benefits:
 **Modularity:** Breaks complex tasks into simpler functions.
@@ -167,8 +166,8 @@ const composedFunction = compose(multiply, add);
 
 console.log(composedFunction(5)); // Outputs 12
 ```
-##Q. shallow clone vs deep clone?
-###Shallow Copy
+## Q. shallow clone vs deep clone?
+### Shallow Copy
 1. Copies only the top-level structure; nested objects are referebced, not duplicated.
 2. Changes to nested elements in the original object, affect to the copy.
 ```
@@ -178,7 +177,7 @@ const shallowClone = { ...original }; // Object.assign({}, old_object) is also u
 shallowClone.b.c = 3;
 console.log(original.b.c); // Outputs 3
 ```
-###Deep Copy
+### Deep Copy
 1. Recursively copies all the elements and create a fully independent objects.
 2. Changes to the original do not affect to the copy.
 ```
@@ -188,7 +187,7 @@ const deepClone = JSON.parse(JSON.stringify(original)); // structuredClone() is 
 deepClone.b.c = 3;
 console.log(original.b.c); // Outputs 2
 ```
-##Q. Diff b/w Array.foreach and Array.map?
+## Q. Diff b/w Array.foreach and Array.map?
 **forEach:**
 Executes a function for each element.
 Does not return a new array.
@@ -197,23 +196,23 @@ Used for side effects.
 Executes a function for each element.
 Returns a new array.
 Used for transforming data.
-##Q. Diff b/w map, reduce, filter, find?
+## Q. Diff b/w map, reduce, filter, find?
 **map:** Transforms each element and returns a new array.
 **reduce:** Reduces the array to a single value.
 **filter:** Filters elements based on a condition and returns a new array.
 **find:** Finds and returns the first element that satisfies a condition.
-##Q Diff b/w call, bind, apply?
+## Q Diff b/w call, bind, apply?
 **call:** Invokes a function with a specified this context and individual arguments.
 **apply:** Invokes a function with a specified this context and arguments as an array.
 **bind:** Creates a new function with a specified this context and optionally prepends arguments.
-##Q. Explain hoisting in js?
+## Q. Explain hoisting in js?
 Hoisting in JavaScript is a behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase. This means you can use variables and functions before they are declared in the code.
 
 Variables declared with var are hoisted to the top of their function or global scope, but their initialization is not hoisted.
 Variables declared with let and const are also hoisted but are not initialized. Accessing them before their declaration results in a ReferenceError due to the **temporal dead zone (TDZ)**.
 
 Function declarations are fully hoisted, meaning both the function name and its definition are moved to the top of their scope.
-##Q. generator function, IIFE?
+## Q. generator function, IIFE?
 A generator function can pause and resume execution using the yield keyword. Defined with function*.
 ```
 function* generatorFunction() {
@@ -233,14 +232,14 @@ An IIFE is a function that runs immediately after being defined, creating a new 
 })();
 // Outputs: Hello, World!
 ```
-##Q. Promise.all() vs Promise.allSettled() vs Promise.any() & Promise.race()?
+## Q. Promise.all() vs Promise.allSettled() vs Promise.any() & Promise.race()?
 **Promise.all():** Runs multiple promises in pararrel; fails fast if any promise rejects.
 **Promise.allsettled:** Runs multiple promises in pararrel, and result includes both fulfilled & rejected.
 **Promise.race():** Waits for the first promise to settle (either resolve or reject).
 **Promise.any:** Resolves with the first fulfilled promise, ignoring rejections.
-##Q. Explain Object.freeze()?
+## Q. Explain Object.freeze()?
 Object.freeze() is a method in JavaScript that prevents an object from being modified. This is useful for creating immutable objects. Although, Nested objects are not frozen.
-##Q. How does js handle concurrency with single-threaded execution?
+## Q. How does js handle concurrency with single-threaded execution?
 JavaScript handles concurrency using the **event loop** and **asynchronous programming**. Despite being single-threaded, it can manage multiple tasks efficiently. Here's how it works:
 ### Event Loop
 The event loop is the core mechanism that allows JavaScript to perform non-blocking operations. It continuously checks the call stack and the task queue to determine what to execute next.
