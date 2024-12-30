@@ -67,8 +67,30 @@ async function executeAsyncFunction() {
 **Readability:** async/await makes the code easier to read and maintain, especially when dealing with multiple asynchronous operations.
 
 ##Q. How does this keyword work in different contexts in js?
-##Q. debounce and throttle uses
+The this keyword in JavaScript can be a bit tricky because its value depends on the context in which it is used. Here are some common contexts:
+1. **Global Context:** refers to the global object, window in the case of browser.
+2. **Function Context:** refers to the global object and undefined in strict mode.
+3. **Arrow Function:** Do not have thier own this context, instead the refers to the outer lexical function/object, where the arrow function is defined. 
+4. **Event Handlers:** this refers to the element that received the element. 
+
+##Q. Debounce and Throttle
+**Debounce** delays the execution of a function/api until a specific time is passed since the last call. 
+Use case: Search input, resize window
+**Throttle** ensures that a function is getting called at most once in a specific period. 
+Use Cases: Updating elements as the users scrolls. Preventing multiple clicks of a button in a short time.
 ##Q. What is currying in JS?
+**Currying** in JavaScript is a technique where a function takes multiple arguments one at a time, returning a new function for each argument until all arguments are provided.
+Use Case: We can create a function with present configuration,  making your code more modular and reusable. e.g. logging.
+```
+function configureLogger(level) {
+    return function(message) {
+        console.log(`[${level}] ${message}`);
+    };
+}
+
+const infoLogger = configureLogger('INFO');
+infoLogger('This is an info message'); // Outputs: [INFO] This is an info message
+```
 ##Q. Explain how closures can lead to memory leaks?
 ##Q. What is garbage collection in js, and how does it work?
 ##Q. How can you prevent memory leaks in js?
