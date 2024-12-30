@@ -1,8 +1,8 @@
 # JavaScript
 
 ## Contents
-- Q. How do JS closure works?
-- Q. What is Prototypal Inheritance in JS?
+- [Q. How do JS closure works?](#q-how-do-js-closure-works)
+- [Q. What is Prototypal Inheritance in JS?](#q-what-is-prototypal-inheritance-in-js)
 
 ## Q. How do JS closure works?
 A closure in JavaScript is a powerful feature that allows a function to access variables from an outer function's scope even after the outer function has finished executing. This is possible because functions in JavaScript form closures around the scope in which they were declared.
