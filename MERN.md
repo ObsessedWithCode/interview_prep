@@ -19,6 +19,11 @@
     - [Q. Promise.all() vs Promise.allSettled() vs Promise.any() & Promise.race()?](#q-promiseall-vs-promiseallsettled-vs-promiseany-and-promiserace)
     - [Q. Explain Object.freeze()?](#q-explain-objectfreeze)
     - [Q. How does js handle concurrency with single-threaded execution?](#q-how-does-js-handle-concurrency-with-single-threaded-execution)
+- [Node JS](#node-js)
+- [Express-js / Mongo DB](#express-js-mongo-db)
+- [Node JS](#node-js)
+- [React JS](#react-js)
+- [Output based qna](#output-based-qna)
 
 # JavaScript
 
