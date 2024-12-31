@@ -2,6 +2,23 @@
 - [JavaScript](#javascript)
     - [Q. How do JS closure works?](#q-how-do-js-closure-works)
     - [Q. What is Prototypal Inheritance in JS?](#q-what-is-prototypal-inheritance-in-js)
+    - [Q. What is a promise? How does it differ from async/await?](#q-what-is-a-promise-how-does-it-differ-from-asyncawait)
+    - [Q. How does this keyword work in different contexts in js?](#q-how-does-this-keyword-work-in-different-contexts-in-js)
+    - [Q. Debounce and Throttle](#q-debounce-and-throttle)
+    - [Q. What is currying in JS?](#q-what-is-currying-in-js)
+    - [Q. Explain how closures can lead to memory leaks?](#q-explain-how-closures-can-lead-to-memory-leaks)
+    - [Q. What is garbage collection in js, and how does it work?](#q-what-is-garbage-collection-in-js-and-how-does-it-work)
+    - [Q. How can you prevent memory leaks in js?](#q-how-can-you-prevent-memory-leaks-in-js)
+    - [Q. Explain the concept of function composition in js?](#q-explain-the-concept-of-function-composition-in-js)
+    - [Q. shallow clone vs deep clone?](#q-shallow-clone-vs-deep-clone)
+    - [Q. Diff b/w Array.foreach and Array.map?](#q-diff-bw-arrayforeach-and-arraymap)
+    - [Q. Diff b/w map, reduce, filter, find?](#q-diff-bw-map-reduce-filter-find)
+    - [Q Diff b/w call, bind, apply?](#q-diff-bw-call-bind-apply)
+    - [Q. Explain hoisting in js?](#q-explain-hoisting-in-js)
+    - [Q. generator function, IIFE?](#q-generator-function-iife)
+    - [Q. Promise.all() vs Promise.allSettled() vs Promise.any() & Promise.race()?](#q-promiseall-vs-promiseallsettled-vs-promiseany-and-promiserace)
+    - [Q. Explain Object.freeze()?](#q-explain-objectfreeze)
+    - [Q. How does js handle concurrency with single-threaded execution?](#q-how-does-js-handle-concurrency-with-single-threaded-execution)
 
 # JavaScript
 
@@ -71,7 +88,7 @@ async function executeAsyncFunction() {
 **Error Handling:** With async/await, you can use try...catch blocks for error handling, which is more intuitive than using .catch() with promises.
 **Readability:** async/await makes the code easier to read and maintain, especially when dealing with multiple asynchronous operations.
 
-##Q. How does this keyword work in different contexts in js?
+## Q. How does this keyword work in different contexts in js?
 The this keyword in JavaScript can be a bit tricky because its value depends on the context in which it is used. Here are some common contexts:
 1. **Global Context:** refers to the global object, window in the case of browser.
 2. **Function Context:** refers to the global object and undefined in strict mode.
@@ -83,7 +100,7 @@ The this keyword in JavaScript can be a bit tricky because its value depends on 
 Use case: Search input, resize window
 **Throttle** ensures that a function is getting called at most once in a specific period. 
 Use Cases: Updating elements as the users scrolls. Preventing multiple clicks of a button in a short time.
-##Q. What is currying in JS?
+## Q. What is currying in JS?
 **Currying** in JavaScript is a technique where a function takes multiple arguments one at a time, returning a new function for each argument until all arguments are provided.
 Use Case: We can create a function with present configuration,  making your code more modular and reusable. e.g. logging.
 ```
